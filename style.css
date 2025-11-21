@@ -1,0 +1,93 @@
+body {
+    background: #0f0f0f;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 60px;
+}
+
+.container {
+    width: 90%;
+    max-width: 420px;
+    background: #111;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.35);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #5c54ff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+ul {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    background: #1a1a1a;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+li.removing {
+    animation: fadeOut 0.25s forwards;
+}
+
+.remove-btn {
+    background: transparent;
+    border: none;
+    color: #ff5c5c;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.total {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-5px); }
+}
